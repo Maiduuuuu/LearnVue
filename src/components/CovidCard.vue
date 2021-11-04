@@ -2,7 +2,7 @@
   <div class="card">
       <header class="card-header has-background-primary">
           <p class="card-header-title">
-              {{country.Country}}
+              <router-link :to="'/covid/' + country.Slug" >{{country.Country}}</router-link>
           </p>
       </header>
       <div class="card-content has-background-grey">
@@ -18,20 +18,12 @@
                             <td>{{country.TotalDeaths}}</td>
                         </tr>
                         <tr>
-                            <th>Total Recovered:</th>
-                            <td>{{country.TotalRecovered}}</td>
-                        </tr>
-                        <tr>
                           <th>New Confirmed:</th>
                           <td>{{country.NewConfirmed}}</td>
                         </tr>
                         <tr>
                             <th>New Deaths:</th>
                             <td>{{country.NewDeaths}}</td>
-                        </tr>
-                        <tr>
-                            <th>New Recovered:</th>
-                            <td>{{country.NewRecovered}}</td>
                         </tr>
                   </tbody>
               </table>
