@@ -24,6 +24,7 @@
 export default {
     created(){
       this.active = this.items.findIndex(item => item.path == this.$route.path);
+      
     },
     data(){
       return {
